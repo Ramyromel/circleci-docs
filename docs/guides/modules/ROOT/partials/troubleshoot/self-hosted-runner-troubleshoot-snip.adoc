@@ -153,6 +153,13 @@ agent:
 
 NOTE: When `KUBE_DISABLE_POD_DELETION_ON_TASK_CLEANUP` is set to true, then task pods may dangle until they are manually cleaned or until garbage collection deletes these pods. By default, garbage collection removes resources after they have lived for 5 hours and 5 mins. You may tweak these settings in your link:https://github.com/CircleCI-Public/container-runner-helm-chart/blob/main/values.yaml#L161-L175[container-agent `values.yaml`].
 
+[#inter-container-communication]
+=== Inter-container communication fails
+
+Unlike the link:https://circleci.com/docs/reference/configuration-reference/#docker[Docker executor], container runner uses `localhost` for inter-container communication rather than container host names. See xref:guides:execution-runner:runner-faqs.adoc#how-do-containers-communicate-on-container-runner[How Do Containers Within a Job Communicate With Each Other?] for details.
+
+If your job references a service container by name (for example, `postgres` or `redis`), update those connections to use `localhost` instead.
+
 [#machine-runner]
 == Machine runner
 

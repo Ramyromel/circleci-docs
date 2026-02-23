@@ -256,6 +256,11 @@ An IAM role can be associated with the service account used for the container ru
 
 If you would like to run your CI job within a container, but do not want to use Kubernetes, you can use a xref:guides:execution-runner:install-machine-runner-3-on-docker.adoc[machine runner] with Docker installed.
 
+[#how-do-containers-communicate-on-container-runner]
+==== How do containers within a job communicate with each other?
+
+On the link:https://circleci.com/docs/reference/configuration-reference/#docker[Docker executor], containers in the same task can reference each other by container name as a hostname. Container runner runs tasks as Kubernetes pods, where all containers in a job share a network namespace and communicate over `localhost` rather than by hostname. See the link:https://kubernetes.io/docs/concepts/services-networking/#the-kubernetes-network-model[Kubernetes network model] documentation for more details.
+
 [#machine-runner-specific-faqs]
 === Machine runner specific FAQs
 
