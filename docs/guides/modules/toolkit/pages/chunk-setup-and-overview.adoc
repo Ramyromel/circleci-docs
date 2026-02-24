@@ -94,6 +94,9 @@ Once you meet the prerequisites, set up Chunk as follows:
 . In the link:https://app.circleci.com/home[CircleCI web app, window=_blank], select your organization.
 . Select **Chunk** from the bottom of the sidebar.
 . Select **Set up Chunk**.
++
+.Set up Chunk for your organization
+image::guides:ROOT:chunk/set-up-chunk.png[Chunk setup modal]
 . You should see a checkmark to confirm the GitHub App is installed for your organization. If not, select **Install CircleCI GitHub App** to install it now.
 . Select your AI model provider from the **Select your AI Model** dropdown. The available options are:
 * **CircleCI (Powered by Anthropic)** — no API key required. This is the default option.
@@ -125,6 +128,9 @@ Anthropic::
 +
 --
 Enter your Anthropic API key. You can generate a key in the link:https://console.anthropic.com/settings/keys[Anthropic console, window=_blank].
+
+.Set up your model provider API key
+image::guides:ROOT:chunk/chunk-setup-model-provider.png[Set up your model provider API key]
 --
 
 OpenAI::
@@ -246,6 +252,9 @@ When scheduling a task, store your `cci-agent-setup.yml` in your repository and 
 When using the chat interface, use the environment selector below the chat text field to set up your environment. If you keep the **Default** environment selected, Chunk will look for a `cci-agent-setup.yml` file in the root of your repository. If you want to name this file differently, create a custom environment and provide Chunk with the name of the file.
 
 You can also add secrets (environment variables) to Chunk's environment here if needed. These secrets will be added to a context named `chunk-<your-environment-name>`.
+
+.Creating an environment for Chunk to use
+image::guides:ROOT:chunk/chunk-create-environment.png[Create an environment for Chunk to use]
 
 === Example cci-agent-setup.yml files
 
@@ -399,7 +408,10 @@ To improve Chunk's ability to run tests and produce fixes aligned with your styl
 
 === I cannot see the Chunk option in the sidebar
 
-If you do not see Chunk in the sidebar, you may not have the **Allow Chunk tasks** option enabled. Navigate to **Organization Settings** > **Advanced** and toggle on **Allow Chunk tasks**.
+If you do not see Chunk image:guides:ROOT:icons/chunk.svg[Chunk icon, role="no-border"] in the sidebar, you may not have the **Allow Chunk tasks** option enabled. Navigate to menu:Organization Settings[Advanced] and toggle on **Allow Chunk tasks**.
+
+.Organization settings > Advanced > Allow Chunk tasks
+image::guides:ROOT:chunk/allow-chunk-tasks.png[Allow Chunk tasks]
 
 === I cannot get my OpenAI organization verified
 
