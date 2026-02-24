@@ -10,7 +10,7 @@ NOTE: **Feedback or feature requests?** Submit them on our link:https://circleci
 Chunk by CircleCI assists with CI/CD related tasks through a natural language chat interface and task scheduling.
 
 * Use the Chunk chat UI to get help with any aspect of your project.
-* Assign Chunk tasks to proactively manage your CI/CD processes. For an example, see the xref:guides:test:fix-flaky-tests.adoc[Fix flaky tests] guide.
+* Assign Chunk tasks to proactively manage your CI/CD processes. For an example, see the xref:guides:test:fix-flaky-tests.adoc[Fix Flaky Tests] guide.
 
 == How Chunk works
 
@@ -73,7 +73,7 @@ The following sections guide you through the Chunk setup process. Once setup is 
 
 Ensure you have the following in place before you get started:
 
-* The CircleCI GitHub App installed in your GitHub organization. Check **Organization Settings** > **VCS Connections**. Chunk needs the GitHub App to recommend fixes and open pull requests.
+* The CircleCI GitHub App installed in your organization. Check **Organization Settings** > **VCS Connections**. Chunk needs the GitHub App to recommend fixes and open pull requests.
 * The **Allow Chunk tasks** option enabled for your organization. Navigate to **Organization Settings** > **Advanced** and toggle on **Allow Chunk tasks**.
 * A model provider API key, if you are not using the default CircleCI (Powered by Anthropic) option. See the <<Model providers>> section for details on each provider.
 
@@ -108,7 +108,7 @@ Once you meet the prerequisites, set up Chunk as follows:
 
 Once Chunk is set up, use the chat interface to instruct Chunk to help you with your CI/CD tasks. Describe your task and tell Chunk which project, repository, and branch to work within.
 
-For a guide to using built-in tasks, see the xref:guides:test:fix-flaky-tests.adoc[Fix flaky tests] guide.
+For a guide to using built-in tasks, see the xref:guides:test:fix-flaky-tests.adoc[Fix Flaky Tests] guide.
 
 [#provider-setup-details]
 === Provider setup details
@@ -160,7 +160,7 @@ You need to enter three values:
 The model ID must include a region prefix, for example `us.`, `eu.`, or `ap.`. The correct format is:
 
 ----
-{region-prefix}.anthropic.{model-name}
+<region-prefix>.anthropic.<model-name>
 ----
 
 These are cross-region inference profile IDs, which AWS uses to route requests for higher availability. For the full list, see link:https://docs.aws.amazon.com/bedrock/latest/userguide/inference-profiles-support.html[Supported regions and models for inference profiles] in the AWS documentation.
@@ -239,7 +239,7 @@ jobs:
       # insert more environment setup here
 ----
 
-Chunk supports all standard CircleCI configuration options, including executors, resource classes, caching, contexts, environment variables, service containers, and orbs. If it works in your `.circleci/config.yml`, it works in `cci-agent-setup.yml`. For a complete reference, see the xref:reference:configuration-reference.adoc[CircleCI configuration reference].
+Chunk supports all standard CircleCI configuration options, including executors, resource classes, caching, contexts, environment variables, service containers, and orbs. If it works in your `.circleci/config.yml`, it works in `cci-agent-setup.yml`. For a complete reference, see the xref:reference:ROOT:configuration-reference.adoc[CircleCI Configuration Reference].
 
 === Instruct Chunk to use your environment
 
@@ -437,7 +437,7 @@ You have not requested access to the Anthropic Claude model in the Bedrock conso
 
 === Amazon Bedrock model not found or 404
 
-The model ID is incorrect or is missing the required region prefix, for example `us.`. Confirm the format is `{region-prefix}.anthropic.{model-name}` and verify that your chosen AWS region supports the model. See the link:https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html[Model support by AWS Region] page in the AWS documentation.
+The model ID is incorrect or is missing the required region prefix, for example `us.`. Confirm the format is `<region-prefix>.anthropic.<model-name>` and verify that your chosen AWS region supports the model. See the link:https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html[Model support by AWS Region] page in the AWS documentation.
 
 === Chunk runs but produces no output when using Amazon Bedrock
 
@@ -455,7 +455,7 @@ No. CircleCI does not store your source code or use it for training purposes. Ch
 
 === How long are Chunk's logs stored?
 
-Chunk's logs are stored by CircleCI for 90 days. This is a fixed retention period that applies to all organizations, regardless of your plan's standard data retention policy. After 90 days, logs are automatically deleted.
+Chunk's logs are stored by CircleCI for 90 days. The 90-day retention period applies to all organizations, regardless of your plan's standard data retention policy. After 90 days, logs are automatically deleted.
 
 === Can I use any Anthropic Claude model on Amazon Bedrock?
 
@@ -467,4 +467,4 @@ The token limit resets at 12:00 UTC each day. If you need more tokens, switch to
 
 == Next steps
 
-* xref:guides:test:fix-flaky-tests.adoc[Fix flaky tests]
+* xref:guides:test:fix-flaky-tests.adoc[Fix Flaky Tests].
