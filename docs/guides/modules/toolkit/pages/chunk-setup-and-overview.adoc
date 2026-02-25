@@ -229,45 +229,46 @@ NOTE: **GitHub only.** Chunk fix buttons are available for `circleci` and `githu
 
 The following fix buttons are available:
 
-.Chunk fix buttons
-[cols="1,2"]
-|===
-|Button |Where it appears
-
-|**Fix error (Beta)**
-|In the step output header on the job page, next to **Explain error**.
+[tabs]
+====
+Fix error (Beta)::
++
+--
+btn:[Fix error (Beta)] appears in the step output header on the job page, next to btn:[Explain error].
 
 .Fix error (Beta) button in step output
 image::guides:ROOT:chunk/fix-error-job-page.png[Fix error (Beta) button in step output]
+--
+Fix job (Beta)::
++
+--
+btn:[Fix job (Beta)] appears:
 
-|**Fix job (Beta)**
-|In the job header on the job page.
-
+* In the job header on the job page.
++
 .Fix job (Beta) button in the job header
 image::guides:ROOT:chunk/fix-job-job-page.png[Fix job (Beta) button in the job header]
-
-|**Fix job (Beta)**
-|On hover, next to a failed job in the pipeline list.
-
+* On hover, next to a failed job in the pipeline list.
++
 .Fix job (Beta) button in the pipeline list
 image::guides:ROOT:chunk/fix-job-pipeline-page.png[Fix job (Beta) button on hover in the pipeline list]
+--
+Fix workflow (Beta)::
++
+--
+btn:[Fix workflow (Beta)] appears:
 
-|**Fix workflow (Beta)**
-|On hover on a failed pipeline row in the pipeline list, to the left of `...`.
-
+* On hover, next to a failed pipeline row in the pipeline list, to the left of the ellipsis icon (image:guides:ROOT:icons/more.svg[Ellipsis icon, role="no-border"]).
++
 .Fix workflow (Beta) button in the pipeline list
 image::guides:ROOT:chunk/fix-workflow-pipeline-page.png[Fix workflow (Beta) button on the pipeline list]
 
-|**Fix workflow (Beta)**
-|In the workflow header on the workflow page.
-
+* In the workflow header on the workflow page.
++
 .Fix workflow (Beta) button in the workflow header
 image::guides:ROOT:chunk/fix-workflow-workflow-page.png[Fix workflow (Beta) button in the workflow header]
-|===
-
-Each button pre-fills Chunk with the relevant failure context for that level.
-For example, **Fix job (Beta)** includes all failed steps and their error logs.
-**Fix workflow (Beta)** includes the workflow ID, the list of failed jobs, and the execution sequence.
+--
+====
 
 === Set up Chunk from a fix button
 
