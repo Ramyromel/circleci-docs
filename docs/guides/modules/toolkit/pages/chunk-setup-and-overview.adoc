@@ -95,7 +95,7 @@ Once you meet the prerequisites, set up Chunk as follows:
 . Select **Chunk** from the bottom of the sidebar.
 . Select **Set up Chunk**.
 +
-.Set up Chunk for your organization.
+.Set up Chunk for your organization
 image::guides:ROOT:chunk/set-up-chunk.png[Chunk setup modal]
 . You should see a checkmark to confirm the GitHub App is installed for your organization. If not, select **Install CircleCI GitHub App** to install it now.
 . Select your AI model provider from the **Select your AI Model** dropdown. The available options are:
@@ -129,7 +129,7 @@ Anthropic::
 --
 Enter your Anthropic API key. You can generate a key in the link:https://console.anthropic.com/settings/keys[Anthropic console, window=_blank].
 
-.Set up your model provider API key.
+.Set up your model provider API key
 image::guides:ROOT:chunk/chunk-setup-model-provider.png[Set up your model provider API key]
 --
 
@@ -236,7 +236,7 @@ Fix error (Beta)::
 --
 btn:[Fix error (Beta)] appears in the step output header on the job page, next to btn:[Explain error].
 
-.Fix error (Beta) button in step output.
+.Fix error (Beta) button in step output
 image::guides:ROOT:chunk/fix-error-job-page.png[Fix error (Beta) button in step output]
 --
 Fix job (Beta)::
@@ -246,11 +246,11 @@ btn:[Fix job (Beta)] appears:
 
 * In the job header on the job page.
 +
-.Fix job (Beta) button in the job header.
+.Fix job (Beta) button in the job header
 image::guides:ROOT:chunk/fix-job-job-page.png[Fix job (Beta) button in the job header]
 * On hover, next to a failed job in the pipeline list.
 +
-.Fix job (Beta) button in the pipeline list.
+.Fix job (Beta) button in the pipeline list
 image::guides:ROOT:chunk/fix-job-pipeline-page.png[Fix job (Beta) button on hover in the pipeline list]
 --
 Fix workflow (Beta)::
@@ -260,12 +260,12 @@ btn:[Fix workflow (Beta)] appears:
 
 * Next to a failed pipeline row in the pipeline list, to the left of the ellipsis icon (image:guides:ROOT:icons/more.svg[Ellipsis icon, role="no-border"]).
 +
-.Fix workflow (Beta) button in the pipeline list.
+.Fix workflow (Beta) button in the pipeline list
 image::guides:ROOT:chunk/fix-workflow-pipeline-page.png[Fix workflow (Beta) button on the pipeline list]
 
 * In the workflow header on the workflow page.
 +
-.Fix workflow (Beta) button in the workflow header.
+.Fix workflow (Beta) button in the workflow header
 image::guides:ROOT:chunk/fix-workflow-workflow-page.png[Fix workflow (Beta) button in the workflow header]
 --
 ====
@@ -326,7 +326,7 @@ When using the chat interface, use the environment selector below the chat text 
 
 You can also add secrets (environment variables) to Chunk's environment here if needed. These secrets will be added to a context named `chunk-<your-environment-name>`.
 
-.Creating an environment for Chunk to use.
+.Creating an environment for Chunk to use
 image::guides:ROOT:chunk/chunk-create-environment.png[Create an environment for Chunk to use]
 
 === Example cci-agent-setup.yml files
@@ -483,7 +483,7 @@ To improve Chunk's ability to run tests and produce fixes aligned with your styl
 
 If you do not see Chunk image:guides:ROOT:icons/chunk.svg[Chunk icon, role="no-border"] in the sidebar, you may not have the **Allow Chunk tasks** option enabled. Navigate to menu:Organization Settings[Advanced] and toggle on **Allow Chunk tasks**.
 
-.Organization settings > Advanced > Allow Chunk tasks.
+.Organization settings > Advanced > Allow Chunk tasks
 image::guides:ROOT:chunk/allow-chunk-tasks.png[Allow Chunk tasks]
 
 === I cannot get my OpenAI organization verified
